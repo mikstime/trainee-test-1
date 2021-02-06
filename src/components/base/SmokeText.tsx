@@ -1,5 +1,11 @@
-import * as React from "react";
+import * as React from 'react'
+import conceal from '@/utils/conceal'
+
 
 export default ({children}) => {
-	return children;
-};
+
+    if (typeof children === 'string') {
+        return conceal(children)
+    }
+    return children
+}
